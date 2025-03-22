@@ -1,0 +1,162 @@
+/* UI Component Variables */
+:root {
+    --card-radius: 8px;
+    --modal-width: 500px;
+    --tooltip-bg: rgba(0, 0, 0, 0.8);
+    --dropdown-width: 200px;
+    --badge-size: 24px;
+}
+
+/* Card Components */
+.card {
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    padding: var(--card-padding);
+    box-shadow: var(--box-shadow);
+}
+
+.card-hover {
+    transition: transform var(--transition-normal);
+}
+
+.card-hover:hover {
+    transform: translateY(-4px);
+}
+
+/* Enhanced Card Variants */
+.card--feature {
+    padding: var(--spacing-xl);
+    background: var(--gradient-primary);
+    color: white;
+}
+
+.card--glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+}
+
+.card--interactive {
+    cursor: pointer;
+    transition: all 0.3s var(--ease-out);
+}
+
+.card--interactive:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow);
+}
+
+/* Badges */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25em 0.75em;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* Tooltips */
+.tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    background: var(--tooltip-bg);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    z-index: var(--z-tooltip);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero__content {
+    max-width: var(--container-md);
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--grid-gap);
+    padding: var(--spacing-xl) 0;
+}
+
+.feature-item {
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius);
+    background: var(--card-bg);
+    text-align: center;
+}
+
+/* Call to Action */
+.cta-section {
+    background: var(--gradient-dark);
+    color: white;
+    padding: var(--spacing-xl) var(--spacing-md);
+    text-align: center;
+    border-radius: var(--border-radius);
+}
+
+/* Navigation Components */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+.nav-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-tab {
+    padding: var(--spacing-md);
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.nav-tab.active {
+    border-bottom-color: var(--primary-color);
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: var(--dropdown-width);
+    background: var(--card-bg);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s var(--ease-out);
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}

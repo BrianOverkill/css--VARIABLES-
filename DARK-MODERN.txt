@@ -1,17 +1,26 @@
 /* Root Variables - Dark Modern Theme */
 :root {
     --primary-color: #8B5CF6;
-    --secondary-color: #4F46E5;
-    --accent-color: #EC4899;
+    --primary-dark: #7C3AED;
+    --primary-light: #A78BFA;
+    --secondary-color: #06B6D4;
+    --accent-color: #F43F5E;
     --background-color: #0F172A;
+    --surface-color: #1E293B;
     --text-color: #E2E8F0;
-    --heading-font: 'Poppins', sans-serif;
-    --body-font: 'Inter', sans-serif;
-    --border-radius: 12px;
-    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-    --link-color: #38BDF8;
-    --link-hover-color: #7DD3FC;
-    --navbar-bg: rgba(15, 23, 42, 0.95);
-    --card-bg: #1E293B;
+    --text-muted: #94A3B8;
+    --heading-color: #F8FAFC;
     --border-color: #334155;
+    --success-color: #10B981;
+    --error-color: #EF4444;
+    --warning-color: #F59E0B;
+    --info-color: #0EA5E9;
+    
+    /* Glass Effects */
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    
+    /* Enhanced Gradients */
+    --gradient-primary: linear-gradient(135deg, #8B5CF6, #6D28D9);
+    --gradient-glow: linear-gradient(135deg, rgba(139, 92, 246, 0.5), rgba(109, 40, 217, 0.2));
 }

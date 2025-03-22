@@ -1,0 +1,32 @@
+/* Advanced Animation Variables */
+:root {
+    --animation-stagger: 100ms;
+    --animation-slide-distance: 50px;
+}
+
+/* Reveal Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(var(--animation-slide-distance));
+    transition: all var(--transition-normal) var(--ease-out);
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Children */
+.stagger-children > * {
+    opacity: 0;
+    animation: staggerFade var(--transition-normal) forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: calc(var(--animation-stagger) * 1); }
+.stagger-children > *:nth-child(2) { animation-delay: calc(var(--animation-stagger) * 2); }
+.stagger-children > *:nth-child(3) { animation-delay: calc(var(--animation-stagger) * 3); }
+
+@keyframes staggerFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

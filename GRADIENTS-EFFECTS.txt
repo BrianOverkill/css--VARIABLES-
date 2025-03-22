@@ -1,0 +1,85 @@
+/* Gradient Variables */
+:root {
+    --gradient-primary: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    --gradient-dark: linear-gradient(to right, #000428, #004e92);
+    --gradient-sunset: linear-gradient(135deg, #DC2626, #EA580C);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+
+    /* Modern Gradients */
+    --gradient-sunrise: linear-gradient(135deg, #F97316, #FBBF24);
+    --gradient-ocean: linear-gradient(135deg, #0EA5E9, #2DD4BF);
+    --gradient-aurora: linear-gradient(135deg, #8B5CF6, #EC4899);
+    --gradient-forest: linear-gradient(135deg, #059669, #22C55E);
+    
+    /* Glass Effects */
+    --glass-bg-light: rgba(255, 255, 255, 0.1);
+    --glass-bg-dark: rgba(0, 0, 0, 0.1);
+    --glass-border-light: rgba(255, 255, 255, 0.2);
+    --glass-border-dark: rgba(0, 0, 0, 0.2);
+    --glass-blur: blur(12px);
+    
+    /* Advanced Shadows */
+    --shadow-colored: 0 4px 20px -5px var(--primary-color);
+    --shadow-glow: 0 0 20px rgba(var(--primary-color), 0.4);
+    --shadow-sharp: 4px 4px 0 var(--accent-color);
+}
+
+/* Glass Effect */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--border-radius);
+}
+
+/* Enhanced Glass Effects */
+.glass-light {
+    background: var(--glass-bg-light);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border-light);
+    border-radius: var(--border-radius);
+}
+
+.glass-dark {
+    background: var(--glass-bg-dark);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border-dark);
+    border-radius: var(--border-radius);
+}
+
+/* Gradient Text */
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* New Gradient Classes */
+.gradient-glow {
+    position: relative;
+}
+
+.gradient-glow::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: var(--gradient-primary);
+    filter: blur(8px);
+    z-index: -1;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.gradient-glow:hover::after {
+    opacity: 1;
+}
+
+/* Shadow Effects */
+.shadow-soft {
+    box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.15);
+}
+
+.shadow-sharp {
+    box-shadow: 5px 5px 0px var(--accent-color);
+}

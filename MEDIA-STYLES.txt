@@ -41,3 +41,42 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: var(--spacing-md);
 }
+
+/* Enhanced Media Components */
+.media-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: var(--spacing-md);
+}
+
+.media-card {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.media-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.media-card:hover .media-card__overlay {
+    opacity: 1;
+}
+
+.media-carousel {
+    display: flex;
+    gap: var(--spacing-md);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: var(--spacing-md);
+}
+
+.media-carousel > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 300px;
+}
