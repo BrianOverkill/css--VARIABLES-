@@ -1,0 +1,17 @@
+/* Root Variables - Light Theme */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #82B1FF;
+    --accent-color: #FF6B6B;
+    --background-color: #FFFFFF;
+    --text-color: #333333;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    --border-radius: 8px;
+    --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --link-color: #2196F3;
+    --link-hover-color: #1976D2;
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --card-bg: #f8f9fa;
+    --border-color: #e0e0e0;
+}

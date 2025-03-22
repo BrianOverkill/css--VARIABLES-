@@ -1,0 +1,17 @@
+/* Root Variables - Cyberpunk Theme */
+:root {
+    --primary-color: #FF00FF;
+    --secondary-color: #00FFFF;
+    --accent-color: #FFFF00;
+    --background-color: #000033;
+    --text-color: #00FF00;
+    --heading-font: 'Orbitron', sans-serif;
+    --body-font: 'Share Tech Mono', monospace;
+    --border-radius: 0px;
+    --box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    --link-color: #FF00FF;
+    --link-hover-color: #00FFFF;
+    --navbar-bg: rgba(0, 0, 51, 0.95);
+    --card-bg: #000066;
+    --border-color: #00FFFF;
+}

@@ -1,0 +1,17 @@
+/* Root Variables - Nature Theme */
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #81C784;
+    --accent-color: #FDD835;
+    --background-color: #F1F8E9;
+    --text-color: #2E7D32;
+    --heading-font: 'Fauna One', serif;
+    --body-font: 'Source Sans Pro', sans-serif;
+    --border-radius: 16px;
+    --box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1);
+    --link-color: #388E3C;
+    --link-hover-color: #1B5E20;
+    --navbar-bg: rgba(241, 248, 233, 0.95);
+    --card-bg: #FFFFFF;
+    --border-color: #C8E6C9;
+}

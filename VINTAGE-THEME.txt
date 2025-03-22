@@ -1,0 +1,17 @@
+/* Root Variables - Vintage Theme */
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #DEB887;
+    --accent-color: #CD853F;
+    --background-color: #FDF5E6;
+    --text-color: #5C4033;
+    --heading-font: 'Playfair Display', serif;
+    --body-font: 'Lora', serif;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 8px rgba(139, 69, 19, 0.15);
+    --link-color: #8B4513;
+    --link-hover-color: #A0522D;
+    --navbar-bg: rgba(253, 245, 230, 0.95);
+    --card-bg: #FAF0E6;
+    --border-color: #DEB887;
+}
