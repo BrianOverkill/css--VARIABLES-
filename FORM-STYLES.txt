@@ -1,0 +1,41 @@
+/* Form Variables and Classes */
+:root {
+    /* Input Styles */
+    --input-padding: 0.75rem 1rem;
+    --input-border: 1px solid var(--border-color);
+    --input-radius: 4px;
+    --input-focus-ring: 0 0 0 2px var(--primary-color);
+    
+    /* Button Sizes */
+    --btn-padding-sm: 0.25rem 0.5rem;
+    --btn-padding-md: 0.5rem 1rem;
+    --btn-padding-lg: 0.75rem 1.5rem;
+    
+    /* Form States */
+    --success-color: #28a745;
+    --error-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+}
+
+/* Form Classes */
+.form-group {
+    margin-bottom: var(--spacing-md);
+}
+
+.form-control {
+    width: 100%;
+    padding: var(--input-padding);
+    border: var(--input-border);
+    border-radius: var(--input-radius);
+    transition: all 0.3s ease;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--btn-padding-md);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+}

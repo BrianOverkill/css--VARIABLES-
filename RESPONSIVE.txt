@@ -1,0 +1,38 @@
+/* Responsive Variables */
+:root {
+    /* Breakpoints */
+    --bp-sm: 576px;
+    --bp-md: 768px;
+    --bp-lg: 992px;
+    --bp-xl: 1200px;
+    --bp-xxl: 1400px;
+
+    /* Mobile-First Media Queries */
+    --mq-sm: "(min-width: 576px)";
+    --mq-md: "(min-width: 768px)";
+    --mq-lg: "(min-width: 992px)";
+    --mq-xl: "(min-width: 1200px)";
+    
+    /* Device-Specific */
+    --mobile-padding: var(--spacing-sm);
+    --tablet-padding: var(--spacing-md);
+    --desktop-padding: var(--spacing-lg);
+}
+
+/* Responsive Container Classes */
+.container-fluid {
+    width: 100%;
+    padding: 0 var(--mobile-padding);
+}
+
+@media (min-width: 576px) {
+    .container-fluid {
+        padding: 0 var(--tablet-padding);
+    }
+}
+
+@media (min-width: 992px) {
+    .container-fluid {
+        padding: 0 var(--desktop-padding);
+    }
+}

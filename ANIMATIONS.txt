@@ -1,0 +1,41 @@
+/* Animation Variables */
+:root {
+    /* Timing */
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+    
+    /* Easings */
+    --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-in: cubic-bezier(0.4, 0, 1, 1);
+    --ease-out: cubic-bezier(0, 0, 0.2, 1);
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* Animation Presets */
+    --scale-hover: scale(1.05);
+    --rotate-hover: rotate(5deg);
+    --slide-amount: 20px;
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn var(--transition-normal) var(--ease-default) forwards;
+}
+
+.slide-up {
+    transform: translateY(var(--slide-amount));
+    opacity: 0;
+    animation: slideUp var(--transition-normal) var(--ease-out) forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,53 @@
+/* Layout and Component Variables */
+:root {
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 4rem;
+
+    /* Container Widths */
+    --container-sm: 540px;
+    --container-md: 720px;
+    --container-lg: 960px;
+    --container-xl: 1140px;
+
+    /* Grid */
+    --grid-gap: 1.5rem;
+    --grid-columns: 12;
+
+    /* Component Sizes */
+    --button-height: 2.5rem;
+    --input-height: 2.5rem;
+    --navbar-height: 4rem;
+    --sidebar-width: 250px;
+    --footer-height: 60px;
+
+    /* Z-index Layers */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal: 1040;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}
+
+/* Component Classes */
+.container {
+    width: 100%;
+    max-width: var(--container-lg);
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.grid {
+    display: grid;
+    gap: var(--grid-gap);
+    grid-template-columns: repeat(var(--grid-columns), 1fr);
+}
+
+.flex-container {
+    display: flex;
+    gap: var(--spacing-md);
+}

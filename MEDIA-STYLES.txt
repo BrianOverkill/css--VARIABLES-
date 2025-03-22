@@ -1,0 +1,43 @@
+/* Media Variables and Classes */
+:root {
+    /* Image Sizes */
+    --img-thumbnail: 150px;
+    --img-small: 300px;
+    --img-medium: 600px;
+    --img-large: 900px;
+
+    /* Aspect Ratios */
+    --ratio-square: 1;
+    --ratio-video: 1.7778; /* 16:9 */
+    --ratio-portrait: 0.75; /* 3:4 */
+
+    /* Media Effects */
+    --image-blur: blur(8px);
+    --image-brightness: brightness(1.2);
+    --image-filter-hover: brightness(1.1) contrast(1.1);
+}
+
+/* Image Container Classes */
+.img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--spacing-md);
+}
