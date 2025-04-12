@@ -12,6 +12,36 @@
     --gradient-aurora: linear-gradient(135deg, #8B5CF6, #EC4899);
     --gradient-forest: linear-gradient(135deg, #059669, #22C55E);
     
+    /* New Gradient Effects */
+    --gradient-neon: linear-gradient(135deg, #ff00ff, #00ffff);
+    --gradient-metal: linear-gradient(to right, #c4c4c4, #eaeaea);
+    --gradient-sunset-dark: linear-gradient(135deg, #FF416C, #FF4B2B);
+    --gradient-cosmic: linear-gradient(to right, #8E2DE2, #4A00E0);
+    
+    /* Navbar & Hero Specific Gradients */
+    --nav-gradient: linear-gradient(90deg, 
+        rgba(var(--primary-color-rgb), 0.1),
+        rgba(var(--secondary-color-rgb), 0.1)
+    );
+    --hero-gradient: linear-gradient(135deg,
+        var(--background-color),
+        var(--surface-color)
+    );
+    --hero-overlay: linear-gradient(to right,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.4)
+    );
+    
+    /* Enhanced Glass Effects */
+    --nav-glass: rgba(255, 255, 255, 0.02);
+    --nav-glass-border: rgba(255, 255, 255, 0.05);
+    --hero-glass: rgba(255, 255, 255, 0.03);
+
+    /* Blend Modes */
+    --blend-overlay: screen;
+    --blend-soft: soft-light;
+    --blend-multiply: multiply;
+    
     /* Glass Effects */
     --glass-bg-light: rgba(255, 255, 255, 0.1);
     --glass-bg-dark: rgba(0, 0, 0, 0.1);
@@ -82,4 +112,50 @@
 
 .shadow-sharp {
     box-shadow: 5px 5px 0px var(--accent-color);
+}
+
+/* New Effect Classes */
+.gradient-border {
+    position: relative;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-radius: var(--border-radius);
+}
+
+.gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: -2px;
+    background: var(--gradient-primary);
+    border-radius: inherit;
+    z-index: -1;
+}
+
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.text-gradient-neon {
+    background: var(--gradient-neon);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Hero Background Effects */
+.hero-gradient-bg {
+    background: var(--hero-gradient);
+    position: relative;
+}
+
+.hero-gradient-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--hero-overlay);
+    z-index: 1;
 }

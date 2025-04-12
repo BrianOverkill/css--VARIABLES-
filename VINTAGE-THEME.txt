@@ -1,17 +1,52 @@
 /* Root Variables - Vintage Theme */
 :root {
-    --primary-color: #8B4513;
-    --secondary-color: #DEB887;
-    --accent-color: #CD853F;
-    --background-color: #FDF5E6;
-    --text-color: #5C4033;
-    --heading-font: 'Playfair Display', serif;
-    --body-font: 'Lora', serif;
-    --border-radius: 4px;
-    --box-shadow: 0 2px 8px rgba(139, 69, 19, 0.15);
-    --link-color: #8B4513;
-    --link-hover-color: #A0522D;
-    --navbar-bg: rgba(253, 245, 230, 0.95);
-    --card-bg: #FAF0E6;
-    --border-color: #DEB887;
+    // ...existing code...
+    
+    /* Additional Typography Variables */
+    --subtitle-font: 'Cormorant Garamond', serif;
+    --letter-spacing: 0.5px;
+    --line-height: 1.6;
+    
+    /* Additional Color Variables */
+    --muted-color: #A08679;
+    --highlight-color: #F4A460;
+    --footer-bg: #8B4513;
+    --footer-text: #FDF5E6;
+    
+    /* Spacing Variables */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    
+    /* Component-specific Variables */
+    --button-padding: 0.75rem 1.5rem;
+    --input-border: 1px solid var(--border-color);
+    --card-padding: 1.5rem;
+    --section-spacing: 4rem;
+    --divider-color: rgba(139, 69, 19, 0.2);
+    
+    /* Effects */
+    --transition-speed: 0.3s;
+    --hover-opacity: 0.8;
+    --overlay-bg: rgba(139, 69, 19, 0.5);
+}
+
+/* Utility Classes */
+.vintage-overlay {
+    background: var(--overlay-bg);
+}
+
+.vintage-card {
+    background: var(--card-bg);
+    padding: var(--card-padding);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.vintage-divider {
+    height: 1px;
+    background: var(--divider-color);
+    margin: var(--spacing-md) 0;
 }

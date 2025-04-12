@@ -97,3 +97,86 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+
+/* New Blend Mode Utilities */
+.blend-overlay { mix-blend-mode: overlay; }
+.blend-multiply { mix-blend-mode: multiply; }
+.blend-screen { mix-blend-mode: screen; }
+.blend-soft-light { mix-blend-mode: soft-light; }
+
+/* Advanced Transform Utilities */
+.scale-hover {
+    transition: transform 0.2s ease;
+}
+.scale-hover:hover {
+    transform: scale(1.05);
+}
+
+.rotate-hover {
+    transition: transform 0.2s ease;
+}
+.rotate-hover:hover {
+    transform: rotate(5deg);
+}
+
+/* Backdrop Filter Utilities */
+.backdrop-blur { backdrop-filter: blur(8px); }
+.backdrop-contrast { backdrop-filter: contrast(1.1); }
+.backdrop-brightness { backdrop-filter: brightness(1.1); }
+
+/* Advanced Shadow Utilities */
+.shadow-sharp-hover {
+    transition: box-shadow 0.2s ease;
+}
+.shadow-sharp-hover:hover {
+    box-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.shadow-glow {
+    box-shadow: 0 0 20px rgba(var(--primary-color), 0.4);
+}
+
+/* Navigation Utilities */
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+}
+
+.nav-transparent {
+    background: transparent !important;
+}
+
+.nav-scrolled {
+    background: var(--nav-glass) !important;
+    backdrop-filter: var(--glass-blur);
+}
+
+/* Hero Utilities */
+.hero-fullscreen {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-centered {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay-dark {
+    position: relative;
+}
+
+.hero-overlay-dark::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--hero-overlay);
+    z-index: 1;
+}

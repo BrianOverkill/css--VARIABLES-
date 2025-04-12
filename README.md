@@ -28,9 +28,37 @@ A comprehensive collection of CSS variables and reusable components for modern w
 
 3. Use variables in your CSS:
 ```css
+/* Basic Usage */
 .my-element {
     color: var(--primary-color);
     background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+/* Using Theme Colors */
+.card {
+    background: var(--surface-color);
+    border: 2px solid var(--primary-dark);
+    color: var(--text-color);
+}
+
+/* Using Gradients */
+.gradient-button {
+    background: var(--gradient-primary);
+    color: white;
+    padding: var(--spacing-md);
+    border: none;
+    border-radius: var(--border-radius);
+}
+
+/* Glass Effect */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border);
+    padding: var(--spacing-lg);
 }
 ```
 
